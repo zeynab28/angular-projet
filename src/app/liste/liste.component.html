@@ -1,0 +1,24 @@
+<div>
+<table class="responsive-table">
+  <thead>
+    <tr>
+        <th>ninea</th>
+        <th>raison sociale</th>
+        <th>nom</th>
+        <th>adresse</th>
+        <th>statut</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let partenaire of liste">
+      <td>{{partenaire.ninea}}</td>
+      <td>{{partenaire.rs}}</td>
+      <td>{{partenaire.nom}}</td>
+      <td>{{partenaire.adresse}}</td>
+      <td>{{partenaire.statut}}</td>
+    </tr>
+  </tbody>
+  </table>
+</div>

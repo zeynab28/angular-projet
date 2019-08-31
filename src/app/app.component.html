@@ -1,0 +1,48 @@
+
+  <nav class="##880e4f pink darken-4">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Logo</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li> <a class="nav-link" routerLink="/acceuil" routerLinkActive="active">Acceuil</a></li>
+    <li>  
+        <div class="dropdown show">
+            <a class=" dropdown-toggle" href="#"  id="dropdownMenuLink" data-toggle="dropdown" >
+              Utilisateurs
+            </a>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" >  
+      <a class="nav-link" routerLink="/register" routerLinkActive="active" style="color:black">Register</a>
+        <a class="nav-link" routerLink="/liste" routerLinkActive="active" style="color:black">Liste</a>
+      </div>
+      </div>
+    </li>
+    <li> <a class="nav-link" routerLink="/compte" routerLinkActive="active">Compte</a></li>
+    <li> <a class="nav-link" routerLink="/listecompte" routerLinkActive="active">liste Compte</a></li>
+        <li> <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+<!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">EventHub</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav">
+   <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav mr-auto">
+  <li class="nav-item">
+   <a class="nav-link" routerLink="/events" routerLinkActive="active">Events</a>
+  </li>
+
+     <li class="nav-item">
+      <a class="nav-link" routerLink="/special" routerLinkActive="active">Members</a>
+     </li>
+</ul>
+<ul class="navbar-nav">
+  <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
+  <a class="nav-link" routerLink="/register" routerLinkActive="active">Register</a>
+</ul>
+  </div>
+</nav>-->
+<div class="container">
+  <router-outlet></router-outlet>
+
+</div>

@@ -1,0 +1,21 @@
+<div>
+    <table class="responsive-table">
+      <thead>
+        <tr>
+            <th>partenaire</th>
+            <th>numero compte</th>
+            <th>solde</th>
+            
+    
+        </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let compte of listecompte">
+            <td>{{compte.partenaire.id}}</td>
+            <td>{{compte.numbcompte}}</td>
+            <td>{{compte.solde}}</td>
+            
+          </tr>
+        </tbody>
+        </table>
+      </div>
