@@ -1,0 +1,58 @@
+<div class="row pt-5">
+    <div class="col-md-6 mx-auto">
+     <div class="card-rounded-0">
+       <div class="card-header" style="height: 50px">
+          <h3 class="mb-0">Envoi</h3>
+            <div class="card-body">
+              <form class="form">
+                  <div class="input-field col s6">
+                      <em class="material-icons prefix">account_circle</em>
+                      <input [(ngModel)]="envoiData.nomexp" id="icon_prefix" type="text" name="nomexp" class="validate" required>
+                      <label for="icon_prefix">Nom Expediteur</label>
+                    </div>
+
+                    <div class="input-field col s6">
+                        <em class="material-icons prefix">account_circle</em>
+                        <input [(ngModel)]="envoiData.prenomexp" id="icon_prefix" type="text" name="prenomexp" class="validate" required>
+                        <label for="icon_prefix">Prenom Expediteur</label>
+                      </div>
+                      <div class="input-field col s6">
+                          <em class="material-icons prefix">phone</em>
+                          <input [(ngModel)]="envoiData.telexp" id="icon_prefix" type="text" name="telexp" class="validate" required>
+                          <label for="icon_prefix">Telephone Expediteur</label>
+                        </div> 
+                        <div class="input-field col s6">
+                            <em class="material-icons prefix">monetization_on</em>
+                            <input [(ngModel)]="envoiData.montant" id="icon_prefix" type="number" name="montant" class="validate" required>
+                            <label for="icon_prefix">montant</label>
+                          </div>
+
+                       
+                          <div class="input-field col s6">
+                            <em class="material-icons prefix">account_circle</em>
+                            <input [(ngModel)]="envoiData.nomben" id="icon_prefix" type="text" name="nomben" class="validate" required>
+                            <label for="icon_prefix">Nom Beneficiaire</label>
+                          </div>
+      
+                          <div class="input-field col s6">
+                              <em class="material-icons prefix">account_circle</em>
+                              <input [(ngModel)]="envoiData.prenomben" id="icon_prefix" type="text" name="prenomben" class="validate" required>
+                              <label for="icon_prefix">Prenom Beneficiaire</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <em class="material-icons prefix">phone</em>
+                                <input [(ngModel)]="envoiData.telben" id="icon_prefix" type="text" name="telben" class="validate" required>
+                                <label for="icon_prefix">Telephone Beneficiaire</label>
+                              </div> 
+                          <div class="container-login100-form-btn m-t-32">
+                            <button (click)="envoi()"class="login100-form-btn" >
+                              Valider
+                            </button>
+                          </div>  
+              </form>
+            </div>
+       </div>
+      </div>
+    </div>
+  </div>
+

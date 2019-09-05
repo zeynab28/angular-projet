@@ -1,0 +1,123 @@
+<div>
+  <app-navbar></app-navbar>
+</div>
+<div class="row pt-5">
+    <div class="col-md-6 mx-auto">
+     <div class="card-rounded-0">
+       <div class="card-header" style="height: 50px">
+          <h3 class="mb-0">Ajouter partenaire</h3>
+            <div class="card-body">
+              <form class="form">
+                  <div class="input-field col s6">
+                      <em class="material-icons prefix">account_circle</em>
+                      <input [(ngModel)]="ajoutpartenaireData.username" id="icon_prefix" type="text" name="username " class="validate" required>
+                      <label for="icon_prefix">Username</label>
+                    </div>
+               
+                    <div class="input-field col s6">
+                        <em class="material-icons prefix">edit</em>
+                        <input [(ngModel)]="ajoutpartenaireData.password" id="icon_prefix" type="text" name="password" class="validate">
+                        <label for="icon_prefix">Mot de passe</label>
+                      </div>
+
+                <div class="input-field col s6">
+                    <em class="material-icons prefix">account_circle</em>
+                    <input [(ngModel)]="ajoutpartenaireData.nom" id="icon_prefix" type="text" name="nom" class="validate">
+                    <label for="icon_prefix">Nom</label>
+                  </div>
+                
+                  <div class="input-field col s6">
+                      <em class="material-icons prefix">account_circle</em>
+                      <input [(ngModel)]="ajoutpartenaireData.prenom" id="icon_prefix" type="text"name="prenom" class="validate">
+                      <label for="icon_prefix">Prenom</label>
+                    </div>
+
+                    <div class="input-field col s6">
+                        <em class="material-icons prefix">account_circle</em>
+                        <input [(ngModel)]="ajoutpartenaireData.roles" id="icon_prefix" type="text" name="roles"class="validate">
+                        <label for="icon_prefix">Roles</label>
+                      </div>
+
+                      <div class="input-field col s6">
+                          <em class="material-icons prefix">phone</em>
+                          <input [(ngModel)]="ajoutpartenaireData.tel" id="icon_prefix" type="number" name="tel"class="validate">
+                          <label for="icon_prefix">Telephone</label>
+                        </div>
+
+                        <div class="input-field col s6">
+                            <em class="material-icons prefix">filter_1</em>
+                            <input [(ngModel)]="ajoutpartenaireData.cni" id="icon_prefix" type="number" name="cni" class="validate">
+                            <label for="icon_prefix">Cni</label>
+                          </div>
+
+                          <div class="input-field col s6">
+                              <em class="material-icons prefix">place</em>
+                              <input [(ngModel)]="ajoutpartenaireData.adresse" id="icon_prefix" type="text" name="adresse"class="validate">
+                              <label for="icon_prefix">Adresse</label>
+                            </div>
+
+                 <div class="input-field col s6">
+                      <em class="material-icons prefix">email</em>
+                      <input [(ngModel)]="ajoutpartenaireData.email" id="icon_prefix" type="text" name="email" class="validate">
+                      <label for="icon_prefix">Email</label>
+                    </div>
+
+
+                <div class="input-field col s6">
+                      <em class="material-icons prefix">accessibility</em>
+                      <input [(ngModel)]="ajoutpartenaireData.statut" id="icon_prefix" type="text" name="statut"class="validate">
+                      <label for="icon_prefix">Statut</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <em class="material-icons prefix">input</em>
+                        <input [(ngModel)]="ajoutpartenaireData.rs" id="icon_prefix" type="text" name="rs"class="validate">
+                        <label for="icon_prefix">Raison sociale</label>
+                      </div>
+  
+                  <div class="input-field col s6">
+                        <em class="material-icons prefix">account_circle</em>
+                        <input [(ngModel)]="ajoutpartenaireData.nom" id="icon_prefix" type="text" name="nom" class="validate">
+                        <label for="icon_prefix">Nom partenaire</label>
+                      </div>
+
+                      <div class="input-field col s6">
+                          <em class="material-icons prefix">account_circle</em>
+                          <input [(ngModel)]="ajoutpartenaireData.adresse" id="icon_prefix" type="text" name="adresse" class="validate">
+                          <label for="icon_prefix">adresse partenaire</label>
+                        </div>
+
+                        <div class="input-field col s6">
+                            <em class="material-icons prefix">accessibility</em>
+                            <input [(ngModel)]="ajoutpartenaireData.statut" id="icon_prefix" type="text" name="statut" class="validate">
+                            <label for="icon_prefix">statut</label>
+                          </div>
+                          <div class="input-field col s6">
+                              <em class="material-icons prefix">filter_1</em>
+                              <input [(ngModel)]="ajoutpartenaireData.ninea" id="icon_prefix" type="text" name="ninea" class="validate">
+                              <label for="icon_prefix">Ninea</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <em class="material-icons prefix">monetization_on</em>
+                                <input [(ngModel)]="ajoutpartenaireData.solde" id="icon_prefix" type="number" name="solde" class="validate">
+                                <label for="icon_prefix">Solde</label>
+                              </div>
+
+                    <div class="input-field col s6">
+                        <em class="material-icons prefix">insert_photo</em>
+                        <img [src]="imageUrl"  style="width:20px;height:20px" alt="">
+                        <input  type="file" (change)="handleFileInput($event.target.files)" #image accept="images/*"id="icon_prefix" name="imageName" class="validate">
+                        <label for="icon_prefix">Image</label>
+                      </div>
+
+                      <div class="container-login100-form-btn m-t-32">
+                        <button (click)="ajoutpartenaire()"class="login100-form-btn" >
+                          Valider
+                        </button>
+                      </div>
+              </form>
+            </div>
+       </div>
+      </div>
+    </div>
+  </div>
+

@@ -1,0 +1,92 @@
+
+  <nav class="##880e4f pink darken-4">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Logo</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down" >
+        <li> <a class="nav-link" routerLink="/acceuil" routerLinkActive="active">Acceuil</a></li>
+    <li style="margin-top: 9px" *ngIf="isAdmin()">  
+        <div class="dropdown show">
+            <a class=" dropdown-toggle" href="#"  id="dropdownMenuLink" data-toggle="dropdown" >
+              Gestion des utilisateurs
+            </a>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" >  
+      <a class="nav-link" routerLink="/register" routerLinkActive="active" style="color:black">Register</a>
+      </div>
+      </div>
+    </li>
+    <li style="margin-top: 9px" *ngIf="isSuperAdmin()">  
+      <div class="dropdown show">
+          <a class=" dropdown-toggle" href="#"  id="dropdownMenuLink" data-toggle="dropdown" >
+            Gestion des comptes
+          </a>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" >  
+    <a class="nav-link" routerLink="/compte" routerLinkActive="active" style="color:black">Ajouter un compte</a>
+      <a class="nav-link" routerLink="/listecompte" routerLinkActive="active" style="color:black">Liste des comptes</a>
+    </div>
+    </div>
+  </li >
+  <li style="margin-top: 9px" *ngIf="isUser()">  
+    <div class="dropdown show">
+        <a class=" dropdown-toggle" href="#"  id="dropdownMenuLink" data-toggle="dropdown" >
+          Transaction
+        </a>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" >  
+  <a class="nav-link" routerLink="/envoi" routerLinkActive="active" style="color:black">Effectuer un envoi</a>
+    <a class="nav-link" routerLink="/" routerLinkActive="active" style="color:black">Liste des transactions</a>
+  </div>
+  </div>
+</li>
+<li style="margin-top: 9px" *ngIf="isSuperAdmin()">  
+  <div class="dropdown show">
+      <a class=" dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" >
+        Gestion des partenaires
+      </a>
+<div class="dropdown-menu" aria-labelledby="dropdownMenuLink" >  
+<a class="nav-link" routerLink="/ajoutpartenaire" routerLinkActive="active" style="color:black">Ajouter un partenaire</a>
+  <a class="nav-link" routerLink="/liste" routerLinkActive="active" style="color:black">Liste des partenaires</a>
+</div>
+</div>
+</li>
+<li style="margin-top: 9px" *ngIf="isCaissier()">  
+  <div class="dropdown show">
+      <a class=" dropdown-toggle" href="#"  id="dropdownMenuLink" data-toggle="dropdown" >
+        Gestion des depots
+      </a>
+<div class="dropdown-menu" aria-labelledby="dropdownMenuLink" >  
+<a class="nav-link" routerLink="/depot" routerLinkActive="active" style="color:black">Faire un depot</a>
+  <a class="nav-link" routerLink="/listedepot" routerLinkActive="active" style="color:black">Liste des depots</a>
+</div>
+</div>
+</li>
+
+      </ul>
+      <a class="nav-link" style="cursor:pointer" *ngIf="_authenfication.loggIn()" (click)="_authenfication.logOut()">Logout</a>
+
+    </div>
+  </nav>
+<!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">EventHub</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav">
+   <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav mr-auto">
+  <li class="nav-item">
+   <a class="nav-link" routerLink="/events" routerLinkActive="active">Events</a>
+  </li>
+
+     <li class="nav-item">
+      <a class="nav-link" routerLink="/special" routerLinkActive="active">Members</a>
+     </li>
+</ul>
+<ul class="navbar-nav">
+  <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
+  <a class="nav-link" routerLink="/register" routerLinkActive="active">Register</a>
+</ul>
+  </div>
+</nav>-->
+<div class="container">
+  <router-outlet></router-outlet>
+
+</div>
+

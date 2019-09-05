@@ -1,8 +1,8 @@
 <div class="row pt-5">
     <div class="col-md-6 mx-auto">
      <div class="card-rounded-0">
-       <div class="card-header">
-          <h3 class="mb-0">Register</h3>
+       <div class="card-header" style="height:50px">
+          <h3 class="mb-0">Ajouter un utilisateur</h3>
             <div class="card-body">
               <form class="form">
                   <div class="input-field col s6">
@@ -12,7 +12,7 @@
                     </div>
                
                     <div class="input-field col s6">
-                        <em class="material-icons prefix">account_circle</em>
+                        <em class="material-icons prefix">edit</em>
                         <input [(ngModel)]="registerUserData.password" id="icon_prefix" type="text" name="password" class="validate">
                         <label for="icon_prefix">Mot de passe</label>
                       </div>
@@ -36,47 +36,52 @@
                       </div>
 
                       <div class="input-field col s6">
-                          <em class="material-icons prefix">account_circle</em>
+                          <em class="material-icons prefix">phone</em>
                           <input [(ngModel)]="registerUserData.tel" id="icon_prefix" type="number" name="tel"class="validate">
                           <label for="icon_prefix">Telephone</label>
                         </div>
 
                         <div class="input-field col s6">
-                            <em class="material-icons prefix">account_circle</em>
+                            <em class="material-icons prefix">filter_1</em>
                             <input [(ngModel)]="registerUserData.cni" id="icon_prefix" type="number" name="cni" class="validate">
                             <label for="icon_prefix">Cni</label>
                           </div>
 
                           <div class="input-field col s6">
-                              <em class="material-icons prefix">account_circle</em>
+                              <em class="material-icons prefix">person_pin_circle</em>
                               <input [(ngModel)]="registerUserData.adresse" id="icon_prefix" type="text" name="adresse"class="validate">
                               <label for="icon_prefix">Adresse</label>
                             </div>
 
                  <div class="input-field col s6">
-                      <em class="material-icons prefix">account_circle</em>
+                      <em class="material-icons prefix">email</em>
                       <input [(ngModel)]="registerUserData.email" id="icon_prefix" type="text" name="email" class="validate">
                       <label for="icon_prefix">Email</label>
                     </div>
 
                 <div class="input-field col s6">
-                      <em class="material-icons prefix">account_circle</em>
+                      <em class="material-icons prefix">home</em>
                       <input [(ngModel)]="registerUserData.partenaire" id="icon_prefix" type="text" name="partenaire"class="validate">
                       <label for="icon_prefix">Partenaire</label>
                     </div>
 
                 <div class="input-field col s6">
-                      <em class="material-icons prefix">account_circle</em>
+                      <em class="material-icons prefix">accessibility</em>
                       <input [(ngModel)]="registerUserData.statut" id="icon_prefix" type="text" name="statut"class="validate">
                       <label for="icon_prefix">Statut</label>
                     </div>
                     <div class="input-field col s6">
-                        <em class="material-icons prefix">account_circle</em>
-                        <img [src]="imageUrl"  style="width:50px;height:50px" alt="">
+                        <em class="material-icons prefix">insert_photo</em>
+                        <img [src]="imageUrl"  style="width:20px;height:20px" alt="">
                         <input  type="file" (change)="handleFileInput($event.target.files)" #image accept="images/*"id="icon_prefix" name="imageName" class="validate">
                         <label for="icon_prefix">Image</label>
                       </div>
-                <button (click)="registerUser()" type="button" class="btn btn-primary float-right">Valider</button>
+              
+                <div class="container-login100-form-btn m-t-32">
+                  <button (click)="registerUser()"class="login100-form-btn" >
+                    Valider
+                  </button>
+                </div>
               </form>
             </div>
        </div>

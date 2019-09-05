@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ListecompteService} from '../listecompte.service'
+import { ListecompteService} from '../listecompte.service';
 @Component({
   selector: 'app-listecompte',
   templateUrl: './listecompte.component.html',

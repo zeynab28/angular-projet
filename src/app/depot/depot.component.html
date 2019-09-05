@@ -1,0 +1,35 @@
+<div class="row pt-5">
+    <div class="col-md-6 mx-auto">
+     <div class="card-rounded-0">
+       <div class="card-header" style="height: 50px">
+          <h3 class="mb-0">Depot</h3>
+            <div class="card-body">
+              <form class="form">
+                  <div class="input-field col s6">
+                      <em class="material-icons prefix">monetization_on</em>
+                      <input [(ngModel)]="ajoutDepotData.montant" id="icon_prefix" type="number" name="montant" class="validate" required>
+                      <label for="icon_prefix"> Montant</label>
+                    </div>
+               
+                    <div class="input-field col s6">
+                        <em class="material-icons prefix">account_circle</em>
+                        <input [(ngModel)]="ajoutDepotData.user" id="icon_prefix" type="number" name="password" class="validate">
+                        <label for="icon_prefix">Utilisateurs</label>
+                      </div>
+
+                <div class="input-field col s6">
+                    <em class="material-icons prefix">input</em>
+                    <input [(ngModel)]="ajoutDepotData.compte" id="icon_prefix" type="text" name="compte" class="validate">
+                    <label for="icon_prefix">Compte</label>
+                  </div>
+                  <div class="container-login100-form-btn m-t-32">
+                    <button (click)="ajoutDepot()"class="login100-form-btn" >
+                      Valider
+                    </button>
+                  </div>
+                </form>
+              </div>
+         </div>
+        </div>
+      </div>
+    </div>

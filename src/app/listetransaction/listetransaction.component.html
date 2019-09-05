@@ -1,0 +1,44 @@
+<div>
+    <table class="responsive-table">
+      <thead>
+        <tr>
+            <th>nom</th>
+            <th>prenom</th>
+            <th>telephone</th>
+            <th>date transaction</th>
+            <th>code transaction</th>
+            <th>montant</th>
+            <th>comission envoi</th>
+            <th>comission retrait</th>
+            <th>comission etat</th>
+            <th>comission systeme</th>
+            <th>frais</th>
+            <th>type de transaction</th>
+            <th>utilisateur</th>
+
+    
+    
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let send of envoi">
+          <td>{{send.nom}}</td>
+          <td>{{send.prenom}}</td>
+          <td>{{send.telephone}}</td>
+          <td>{{send.datetransaction}}</td>
+          <td>{{send.codetransaction}}</td>
+          <td>{{send.montant}}</td>
+          <td>{{send.comenvoi}}</td>
+          <td>{{send.comretrait}}</td>
+          <td>{{send.cometat}}</td>
+          <td>{{send.comsystem}}</td>
+          <td>{{send.frais}}</td>
+          <td>{{send.type}}</td>
+          <td>{{send.user}}</td>
+
+
+        </tr>
+      </tbody>
+      </table>
+    </div>
+    
