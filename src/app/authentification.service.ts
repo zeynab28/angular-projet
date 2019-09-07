@@ -9,7 +9,7 @@ import { JwtHelperService } from "@auth0/angular-jwt";
   providedIn: 'root'
 })
 export class AuthentificationService {
- // private _registerUrl = "http://localhost:8000/api/register"
+//  private _listuserUrl = "http://localhost:8000/api/liste_user"
   private _loginUrl = "http://localhost:8000/api/login_check"
   jwt : string;
   username : string;
@@ -48,6 +48,9 @@ export class AuthentificationService {
     localStorage.removeItem('token')
     this._router.navigate(['/login'])
    }
+  //  getListUser(){
+  //   return this.http.get<any>(this._listuserUrl)
+  // }
     saveToken(jwt:string)
     {
       localStorage.setItem('token',jwt['token']);
@@ -105,5 +108,7 @@ isAuthenticated() {
     this.jwt=localStorage.getItem('token');
     this.parseJWT();
   }
-  
+ 
+
+
 }

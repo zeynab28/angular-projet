@@ -11,6 +11,8 @@ import { EnvoiComponent } from './envoi/envoi.component';
 import { ListedepotComponent } from './listedepot/listedepot.component';
 import { ListetransactionComponent } from './listetransaction/listetransaction.component';
 import { AjoutpartenaireComponent } from './ajoutpartenaire/ajoutpartenaire.component';
+import { ListeuserComponent } from './listeuser/listeuser.component';
+import { PdfComponent } from './pdf/pdf.component';
 
 const routes: Routes = [
   {
@@ -18,7 +20,14 @@ const routes: Routes = [
     redirectTo:'/login',
     pathMatch:'full'
   },
-  
+  {
+    path:"pdf",
+    component:PdfComponent
+  },
+  {
+    path:"listeuser",
+    component:ListeuserComponent
+  },
   {
     path:"liste",
     component:ListeComponent

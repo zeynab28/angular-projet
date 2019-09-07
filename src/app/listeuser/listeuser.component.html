@@ -1,0 +1,45 @@
+
+<div>
+  <app-navbar></app-navbar>
+</div>
+<div>
+    <table class="responsive-table">
+      <thead>
+        <tr>
+            <th>username</th>
+            <th>password</th>
+            <th>roles</th>
+            <th>telephone</th>
+            <th>nom</th>
+            <th>prenom</th>
+            <th>adresse</th>
+            <th>cni</th>
+            <th>statut</th>
+            <th>partenaire</th>
+            <th>email</th>
+            <th>compte</th>
+
+          
+    
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let listuser of listuser">
+          <td>{{listuser.username}}</td>
+          <td>{{listuser.password}}</td>
+          <td>{{listuser.roles}}</td>
+          <td>{{listuser.tel}}</td>
+          <td>{{listuser.nom}}</td>
+          <td>{{listuser.prenom}}</td>
+          <td>{{listuser.adresse}}</td>
+          <td>{{listuser.cni}}</td>
+         <td><button type="button" (click)="bloquage(listuser.id)" class=" btn-success" [ngClass]="{'btn': true,'btn-danger':listuser.statut=='inactif'}">{{listuser.statut}}</button></td>
+          <td>{{listuser.partenaire.nom}}</td>
+          <td>{{listuser.email}}</td>
+          <td>{{listuser.compte.numbcompte}}</td>
+
+
+        </tr>
+      </tbody>
+      </table>
+    </div>

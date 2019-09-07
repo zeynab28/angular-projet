@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthentificationService } from '../authentification.service';
 import { Router } from '@angular/router'
+import swal from 'sweetalert';
 
 @Component({
   selector: 'app-login',
@@ -18,10 +19,12 @@ loginUserData = {}
     this._authenfication.loginUser(this.loginUserData)
     .subscribe(
       res => {
+        
         let jwt= res.body;
         console.log(jwt);
         this._authenfication.saveToken(jwt);
         this._router.navigate(['/acceuil']);
+        swal("Hello world!");
         //localStorage.setItem('token', res.token)
      },
       err => console.log(err)

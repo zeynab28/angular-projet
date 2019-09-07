@@ -22,6 +22,8 @@ import { EnvoiComponent } from './envoi/envoi.component';
 import { ListetransactionComponent } from './listetransaction/listetransaction.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AcceuilComponent } from './acceuil/acceuil.component';
+import { ListeuserComponent } from './listeuser/listeuser.component';
+import { PdfComponent } from './pdf/pdf.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { AcceuilComponent } from './acceuil/acceuil.component';
     EnvoiComponent,
     ListetransactionComponent,
     NavbarComponent,
-    AcceuilComponent
+    AcceuilComponent,
+    ListeuserComponent,
+    PdfComponent
   ],
   imports: [
     BrowserModule,
