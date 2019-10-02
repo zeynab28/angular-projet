@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { TransactionService } from '../transaction.service';
+import { SweetAlert } from 'sweetalert/typings/core';
+import * as _swal from 'sweetalert';
+const swal: SweetAlert = _swal as any;
 @Component({
   selector: 'app-envoi',
   templateUrl: './envoi.component.html',
@@ -16,7 +19,9 @@ envoiData = {}
     
     this._envoi.envoi(this.envoiData)
     .subscribe(
-      res => {console.log(res)},
+      async res => {console.log(res)
+        await swal("Envoi effectué avec succes!", "You clicked the button!", "success");
+      },
       err => console.log(err)
     )
   }

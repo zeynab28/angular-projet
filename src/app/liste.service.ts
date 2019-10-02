@@ -8,9 +8,13 @@ import { HttpClient } from '@angular/common/http';
 export class ListeService {
   
   private _listeuserUrl="http://localhost:8000/api/liste_user";
+  private _listallUrl="http://localhost:8000/api/liste_all";
   private _listeUrl="http://localhost:8000/prestataire/liste";
   constructor(private http:HttpClient) { }
 
+  getListeall(){
+    return this.http.get<any>(this._listallUrl)
+  }
   getListe(){
     return this.http.get<any>(this._listeUrl)
   }
@@ -32,12 +36,12 @@ export class ListeService {
     formData.append('tel',partenaire.tel);
     formData.append('password',partenaire.password);
     formData.append('username',partenaire.username);
-    // formData.append('partenaire',partenaire.partenaire);
+    //formData.append('compte',partenaire.compte);
     formData.append('rs',partenaire.rs);
-    formData.append('nom',partenaire.nom);
-    formData.append('adresse',partenaire.adresse);
+    formData.append('nompart',partenaire.nompart);
+    formData.append('adressemail',partenaire.adressemail);
     formData.append('ninea',partenaire.ninea);
-    formData.append('statut',partenaire.statut);
+    formData.append('statutpart',partenaire.statutpart);
     formData.append('solde',partenaire.solde);
     return this.http
     .post(endpoint, formData);

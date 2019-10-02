@@ -1,13 +1,12 @@
 <div>
   <app-navbar></app-navbar>
-</div>
-<div class="row pt-5">
-    <div class="col-md-6 mx-auto">
-     <div class="card-rounded-0">
-       <div class="card-header" style="height: 50px">
-          <h3 class="mb-0">Ajouter partenaire</h3>
-            <div class="card-body">
-              <form class="form">
+</div> 
+<div class="container-login100" style="background-image: url('assets/images/bg-01.jpg');">
+  <div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
+    <form class="login100-form validate-form">
+      <span class="login100-form-title p-b-37">
+        Ajouter un partenaire
+      </span>
                   <div class="input-field col s6">
                       <em class="material-icons prefix">account_circle</em>
                       <input [(ngModel)]="ajoutpartenaireData.username" id="icon_prefix" type="text" name="username " class="validate" required>
@@ -16,7 +15,7 @@
                
                     <div class="input-field col s6">
                         <em class="material-icons prefix">edit</em>
-                        <input [(ngModel)]="ajoutpartenaireData.password" id="icon_prefix" type="text" name="password" class="validate">
+                        <input [(ngModel)]="ajoutpartenaireData.password" id="icon_prefix" type="password" name="password" class="validate">
                         <label for="icon_prefix">Mot de passe</label>
                       </div>
 
@@ -76,20 +75,20 @@
   
                   <div class="input-field col s6">
                         <em class="material-icons prefix">account_circle</em>
-                        <input [(ngModel)]="ajoutpartenaireData.nom" id="icon_prefix" type="text" name="nom" class="validate">
+                        <input [(ngModel)]="ajoutpartenaireData.nompart" id="icon_prefix" type="text" name="nom" class="validate">
                         <label for="icon_prefix">Nom partenaire</label>
                       </div>
 
                       <div class="input-field col s6">
                           <em class="material-icons prefix">account_circle</em>
-                          <input [(ngModel)]="ajoutpartenaireData.adresse" id="icon_prefix" type="text" name="adresse" class="validate">
-                          <label for="icon_prefix">adresse partenaire</label>
+                          <input [(ngModel)]="ajoutpartenaireData.adressemail" id="icon_prefix" type="text" name="adressemail" class="validate">
+                          <label for="icon_prefix"> add partenaire</label>
                         </div>
 
                         <div class="input-field col s6">
                             <em class="material-icons prefix">accessibility</em>
-                            <input [(ngModel)]="ajoutpartenaireData.statut" id="icon_prefix" type="text" name="statut" class="validate">
-                            <label for="icon_prefix">statut</label>
+                            <input [(ngModel)]="ajoutpartenaireData.statutpart" id="icon_prefix" type="text" name="statut" class="validate">
+                            <label for="icon_prefix">statut du partenaire</label>
                           </div>
                           <div class="input-field col s6">
                               <em class="material-icons prefix">filter_1</em>
@@ -109,6 +108,12 @@
                         <label for="icon_prefix">Image</label>
                       </div>
 
+                      <div class="input-field col s6">
+                          <em class="material-icons prefix">contrat</em>
+                          <button type="button" (click)="downloadPDF()" class="btn-btn-success">Download PDF</button>
+                          
+                        </div>
+
                       <div class="container-login100-form-btn m-t-32">
                         <button (click)="ajoutpartenaire()"class="login100-form-btn" >
                           Valider
@@ -117,7 +122,4 @@
               </form>
             </div>
        </div>
-      </div>
-    </div>
-  </div>
-
+     

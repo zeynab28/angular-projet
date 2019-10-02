@@ -1,10 +1,12 @@
-<div class="row pt-5">
-    <div class="col-md-6 mx-auto">
-     <div class="card-rounded-0">
-       <div class="card-header" style="height: 50px">
-          <h3 class="mb-0"> Ajouter un Compte</h3>
-            <div class="card-body">
-              <form class="form">
+<div>
+  <app-navbar></app-navbar>
+</div> 
+<div class="container-login100" >
+  <div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
+    <form class="login100-form validate-form">
+      <span class="login100-form-title p-b-37">
+        Ajouter un compte
+      </span>
                   <div class="input-field col s6">
                       <em class="material-icons prefix">home</em>
                       <input [(ngModel)]="ajoutCompteData.partenaire" id="icon_prefix" type="text" name="partenaire" class="validate" required>
@@ -25,7 +27,4 @@
               </form>
             </div>
        </div>
-      </div>
-    </div>
-  </div>
-
+     

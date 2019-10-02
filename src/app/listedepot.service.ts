@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ListedepotService {
   private _depotUrl = "http://localhost:8000/api/depot";
-  private _listedepotUrl = "http://localhost:8000/api/liste_depot"
+  private _listedepotUrl = "http://localhost:8000/api/liste_depot";
 
   constructor(private http: HttpClient) { }
   ajoutDepot(depot){

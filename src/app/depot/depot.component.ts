@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ListedepotService } from '../listedepot.service';
+import { SweetAlert } from 'sweetalert/typings/core';
+import * as _swal from 'sweetalert';
+const swal: SweetAlert = _swal as any;
 
 @Component({
   selector: 'app-depot',
@@ -17,7 +20,8 @@ export class DepotComponent implements OnInit {
     
     this._depot.ajoutDepot(this.ajoutDepotData)
     .subscribe(
-      res => {console.log(res)},
+      async res => {console.log(res)
+        await swal("Vous venez de faire un depot!", "You clicked the button!", "success");},
       err => console.log(err)
     )
   }

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthentificationService } from '../authentification.service';
+import { SweetAlert } from 'sweetalert/typings/core';
+import * as _swal from 'sweetalert';
+const swal: SweetAlert = _swal as any;
 
 
 @Component({
@@ -28,7 +31,9 @@ reader.readAsDataURL(this.registerUserData.imageName);
   registerUser(){
    this._authenfication.registerUser(this.registerUserData)
    .subscribe(
-     res => {console.log(res)},
+     async res => {console.log(res)
+      await swal("utilisateur crée!", "You clicked the button!", "success");
+    },
      err => console.log(err)
    )
   }

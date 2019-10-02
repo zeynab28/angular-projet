@@ -35,6 +35,7 @@ export class AuthentificationService {
     formData.append('password',User.password);
     formData.append('username',User.username);
     formData.append('partenaire',User.partenaire);
+    formData.append('compte',User.compte);
     return this.http.post(endpoint, formData);
 
   }
@@ -44,10 +45,10 @@ export class AuthentificationService {
   // loggedIn(){
   //   return !!localStorage.getItem('token')
   //}
-  logoutUser(){
+  /* logoutUser(){
     localStorage.removeItem('token')
     this._router.navigate(['/login'])
-   }
+   } */
   //  getListUser(){
   //   return this.http.get<any>(this._listuserUrl)
   // }
@@ -78,6 +79,7 @@ console.log(this.roles);
   }
   logOut(){
     localStorage.removeItem('token')
+    this._router.navigate(['/login'])
     this.initParams();
   }
 initParams(){

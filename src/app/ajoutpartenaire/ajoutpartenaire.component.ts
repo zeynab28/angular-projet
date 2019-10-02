@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ListeService } from '../liste.service';
+import * as jsPDF from 'jspdf';
+import { SweetAlert } from 'sweetalert/typings/core';
+import * as _swal from 'sweetalert';
+const swal: SweetAlert = _swal as any;
 
 @Component({
   selector: 'app-ajoutpartenaire',
@@ -27,8 +31,20 @@ export class AjoutpartenaireComponent implements OnInit {
       ajoutpartenaire(){
         this._liste.ajoutpartenaire(this.ajoutpartenaireData)
         .subscribe(
-          res => {console.log(res)},
-          err => console.log(err)
+          async res => {console.log(res),
+           await swal("Partenaire crée!", "You clicked the button!", "success");
+          },
+          err => console.log(err),
+          
         )
+       }
+       downloadPDF(){
+        console.log('downloading pdf ...');
+         
+    const doc =new jsPDF();
+     
+    doc.text('Hello world!', 15, 15);
+     
+    doc.save('two-by-four.pdf')
        }
 }

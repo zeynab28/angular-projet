@@ -1,3 +1,7 @@
+
+ <div>
+    <app-navbar></app-navbar>
+  </div> 
 <div>
     <table class="responsive-table">
       <thead>
@@ -7,15 +11,14 @@
             <th>utilisateur</th>
             <th>compte</th>
             
-    
         </tr>
       </thead>
       <tbody>
-          <tr *ngFor="let depot of listedepot">
-            <td>{{depot.montant}}</td>
-            <td>{{depot.date}}</td>
-            <td>{{depot.user}}</td>
-            <td>{{depot.compte}}</td>
+          <tr *ngFor="let listedepot of listedepot">
+            <td>{{listedepot.montant}}</td>
+            <td>{{listedepot.date}}</td>
+            <td>{{listedepot.user.prenom}}</td>
+            <td>{{listedepot.compte.numbcompte}}</td>
           </tr>
         </tbody>
         </table>

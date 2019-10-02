@@ -1,0 +1,27 @@
+
+ <div>
+    <app-navbar></app-navbar>
+  </div> 
+
+  <div>
+    <form method="POST" #f="ngForm" >
+      <h2 class="form-title">Retrait Argent</h2>
+      <div class="form-group">
+          <label for="code" class="text-info">Code Transaction:</label><br>
+          <input [(ngModel)]="RetraitUserData.code" type="text" name="code" id="code" class="form-control">
+      </div>
+  
+      <div class="form-group">
+        <label for="cni" class="text-info">Cni beneficiaire:</label><br>
+        <input [(ngModel)]="RetraitUserData.cni" type="text" name="cni" id="cni" class="form-control">
+    </div>
+      <button (click)="Retrait()" type="button" class="btn btn-success" float-right>Valider</button>
+      <br>
+  
+  
+     </form>
+  </div>
+
+
+              
+               

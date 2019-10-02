@@ -1,4 +1,7 @@
 <div>
+  <app-navbar></app-navbar>
+</div>
+<div>
     <table class="responsive-table">
       <thead>
         <tr>
@@ -11,7 +14,7 @@
       </thead>
       <tbody>
           <tr *ngFor="let compte of listecompte">
-            <td>{{compte.partenaire.id}}</td>
+            <td>{{compte.partenaire.ninea}}</td>
             <td>{{compte.numbcompte}}</td>
             <td>{{compte.solde}}</td>
             

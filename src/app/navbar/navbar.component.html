@@ -1,23 +1,24 @@
 
-  <nav class="##880e4f pink darken-4">
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Logo</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down" >
-        <li> <a class="nav-link" routerLink="/acceuil" routerLinkActive="active">Acceuil</a></li>
-    <li style="margin-top: 9px" *ngIf="isAdmin()">  
-        <div class="dropdown show">
-            <a class=" dropdown-toggle" href="#"  id="dropdownMenuLink" data-toggle="dropdown" >
-              Gestion des utilisateurs
-            </a>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" >  
-      <a class="nav-link" routerLink="/register" routerLinkActive="active" style="color:black">Register</a>
-      <a class="nav-link" routerLink="/listeuser" routerLinkActive="active" style="color:black">Liste user</a>
+  <nav class="#ad1457 pink darken-3  #9c27b0 purple" style="border-style:ridge">
+    <div class="nav-wrapper" style="font-style:italic">
+      <a href="" class="brand-logo"><img src="assets/images/logo-angular.png" style="width:68px;height:59px" alt=""></a>
+      <ul id="nav" class="right hide-on-med-and-down" >
+        <li> <a class="nav-link" routerLink="/home" routerLinkActive="active" >Acceuil</a></li>
+        <li   style="margin-top: 9px" >  
+            <div class="dropdown show" >
+                <a class=" dropdown-toggle" href="#"  id="dropdownMenuLink" data-toggle="dropdown" >
+                  Gestion des users
+                </a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" >  
+          <a class="nav-link" routerLink="/register" routerLinkActive="active" style="color:black">Ajouter un user</a>
+            <a class="nav-link" routerLink="/listeuser" routerLinkActive="active" style="color:black">Liste des users</a>
+            <a class="nav-link" routerLink="/listall" routerLinkActive="active" style="color:black">Liste all users</a>
 
-    </div>
-      </div>
-    </li>
-    <li style="margin-top: 9px" *ngIf="isSuperAdmin()">  
-      <div class="dropdown show">
+          </div>
+          </div>
+        </li>
+    <li  style="margin-top: 9px"  >  
+      <div class="dropdown show" >
           <a class=" dropdown-toggle" href="#"  id="dropdownMenuLink" data-toggle="dropdown" >
             Gestion des comptes
           </a>
@@ -27,19 +28,20 @@
     </div>
     </div>
   </li >
-  <li style="margin-top: 9px" *ngIf="isUser()">  
-    <div class="dropdown show">
+  <li  style="margin-top: 9px" >  
+    <div class="dropdown show" >
         <a class=" dropdown-toggle" href="#"  id="dropdownMenuLink" data-toggle="dropdown" >
           Transaction
         </a>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" >  
   <a class="nav-link" routerLink="/envoi" routerLinkActive="active" style="color:black">Effectuer un envoi</a>
-    <a class="nav-link" routerLink="/listetransaction" routerLinkActive="active" style="color:black">Liste des transactions</a>
+  <a class="nav-link" routerLink="/retrait" routerLinkActive="active" style="color:black">Effectuer un retrait</a>
+  <a class="nav-link" routerLink="/listetransaction" routerLinkActive="active" style="color:black">Liste des transactions</a>
   </div>
   </div>
 </li>
-<li style="margin-top: 9px" *ngIf="isSuperAdmin()">  
-  <div class="dropdown show">
+<li  style="margin-top: 9px" >  
+  <div class="dropdown show" >
       <a class=" dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" >
         Gestion des partenaires
       </a>
@@ -51,20 +53,22 @@
 </div>
 </div>
 </li>
-<li style="margin-top: 9px" *ngIf="isCaissier()">  
-  <div class="dropdown show">
+<li style="margin-top: 9px" >  
+  <div class="dropdown show" >
       <a class=" dropdown-toggle" href="#"  id="dropdownMenuLink" data-toggle="dropdown" >
         Gestion des depots
       </a>
 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" >  
 <a class="nav-link" routerLink="/depot" routerLinkActive="active" style="color:black">Faire un depot</a>
   <a class="nav-link" routerLink="/listedepot" routerLinkActive="active" style="color:black">Liste des depots</a>
+
 </div>
 </div>
 </li>
+<a class="waves-effect waves-light btn-small" style="cursor:pointer" *ngIf="_authenfication.loggIn()" (click)="_authenfication.logOut()">Logout</a>
 
       </ul>
-      <a class="nav-link" style="cursor:pointer" *ngIf="_authenfication.loggIn()" (click)="_authenfication.logOut()">Logout</a>
+
 
     </div>
   </nav>

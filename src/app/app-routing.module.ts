@@ -4,6 +4,7 @@ import { SpecialEventsComponent } from './special-events/special-events.componen
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ListeComponent } from './liste/liste.component';
+import { HomeComponent } from './home/home.component';
 import { CompteComponent } from './compte/compte.component';
 import { ListecompteComponent } from './listecompte/listecompte.component';
 import { DepotComponent } from './depot/depot.component';
@@ -12,7 +13,9 @@ import { ListedepotComponent } from './listedepot/listedepot.component';
 import { ListetransactionComponent } from './listetransaction/listetransaction.component';
 import { AjoutpartenaireComponent } from './ajoutpartenaire/ajoutpartenaire.component';
 import { ListeuserComponent } from './listeuser/listeuser.component';
-import { PdfComponent } from './pdf/pdf.component';
+import { RetraitComponent } from './retrait/retrait.component';
+import { ListComponent} from './list/list.component';
+import { from } from 'rxjs';
 
 const routes: Routes = [
   {
@@ -21,20 +24,25 @@ const routes: Routes = [
     pathMatch:'full'
   },
   {
-    path:"pdf",
-    component:PdfComponent
+    path:"retrait",
+    component:RetraitComponent
   },
+
   {
     path:"listeuser",
     component:ListeuserComponent
+  },
+  {
+    path:"listall",
+    component:ListComponent
   },
   {
     path:"liste",
     component:ListeComponent
   },
   {
-    path:"acceuil",
-    component:ListeComponent
+    path:"home",
+    component:HomeComponent
   },
   {
     path:"listetransaction",

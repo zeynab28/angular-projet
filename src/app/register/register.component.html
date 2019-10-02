@@ -1,10 +1,15 @@
-<div class="row pt-5">
-    <div class="col-md-6 mx-auto">
-     <div class="card-rounded-0">
-       <div class="card-header" style="height:50px">
-          <h3 class="mb-0">Ajouter un utilisateur</h3>
-            <div class="card-body">
-              <form class="form">
+
+ <div>
+    <app-navbar></app-navbar>
+  </div> 
+
+    
+	<div class="container-login100" >
+		<div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
+			<form class="login100-form validate-form">
+				<span class="login100-form-title p-b-37">
+					Ajouter des utilisateurs
+				</span>
                   <div class="input-field col s6">
                       <em class="material-icons prefix">account_circle</em>
                       <input [(ngModel)]="registerUserData.username" id="icon_prefix" type="text" name="username " class="validate" required>
@@ -76,6 +81,11 @@
                         <input  type="file" (change)="handleFileInput($event.target.files)" #image accept="images/*"id="icon_prefix" name="imageName" class="validate">
                         <label for="icon_prefix">Image</label>
                       </div>
+                      <div class="input-field col s6">
+                        <em class="material-icons prefix">monetization</em>
+                        <input [(ngModel)]="registerUserData.compte" id="icon_prefix" type="text" name="compte"class="validate">
+                        <label for="icon_prefix">Compte</label>
+                      </div>
               
                 <div class="container-login100-form-btn m-t-32">
                   <button (click)="registerUser()"class="login100-form-btn" >
@@ -85,6 +95,5 @@
               </form>
             </div>
        </div>
-      </div>
-    </div>
-  </div>
+   
+   

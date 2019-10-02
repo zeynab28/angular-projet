@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppComponent } from './app.component';
+import {ExempleserviceService} from './exempleservice.service';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { SpecialEventsComponent } from './special-events/special-events.component';
@@ -21,9 +22,14 @@ import { AjoutpartenaireComponent } from './ajoutpartenaire/ajoutpartenaire.comp
 import { EnvoiComponent } from './envoi/envoi.component';
 import { ListetransactionComponent } from './listetransaction/listetransaction.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { AcceuilComponent } from './acceuil/acceuil.component';
 import { ListeuserComponent } from './listeuser/listeuser.component';
 import { PdfComponent } from './pdf/pdf.component';
+import { HomeComponent } from './home/home.component';
+import { RetraitComponent } from './retrait/retrait.component';
+import { TemplateComponent } from './template/template.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ListComponent } from './list/list.component';
+
 
 @NgModule({
   declarations: [
@@ -40,18 +46,24 @@ import { PdfComponent } from './pdf/pdf.component';
     EnvoiComponent,
     ListetransactionComponent,
     NavbarComponent,
-    AcceuilComponent,
     ListeuserComponent,
-    PdfComponent
+    PdfComponent,
+    HomeComponent,
+    RetraitComponent,
+    TemplateComponent,
+    ListComponent,
+  
+  
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    AppRoutingModule,
     
-    AppRoutingModule
+    BrowserAnimationsModule
   ],
-  providers: [AuthentificationService,JwtHelperService,ListeService,
+  providers: [AuthentificationService,JwtHelperService,ListeService,ExempleserviceService,
     {
      provide: HTTP_INTERCEPTORS,
      useClass: TokenInterceptorService,
